@@ -1,0 +1,59 @@
+<!doctype html>
+<html :zap:>
+<head>
+    <meta charset="utf-8">
+    <title>{{ data.meta_title }}</title>
+    <link rel="canonical" href="{{ data.canonical_link }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ data.meta_description }}">
+    <meta name="keywords" content="{{ data.keywords }}">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style amp-custom>
+        body { font-family: 'Montserrat', sans-serif; }
+        amp-story { color: white; }
+        .see-more-btn {
+            position: absolute;
+            width: 150px;
+            bottom: 20px;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<!-- AMP Story Component -->
+<amp-story standalone
+    title="{{ data.meta_title }}"
+    publisher="Your Brand"
+    publisher-logo-src="https://example.com/logo.png"
+    poster-portrait-src="https://example.com/poster.jpg">
+    {% for video in videos %}
+    <!-- Story Page -->
+    <amp-story-page id="page-{{ forloop.counter }}" auto-advance-after="video-{{ forloop.counter }}">
+        <amp-story-grid-layer template="fill">
+            <amp-video id="video-{{ forloop.counter }}" autoplay loop noaudio
+                width="720" height="1280" layout="responsive"
+                poster="https://example.com/video-thumbnail.jpg">
+                <source src="{{ video.video.url }}" type="video/mp4">
+            </amp-video>
+        </amp-story-grid-layer>
+        <!-- Know More Button -->
+        <amp-story-grid-layer template="vertical">
+            <a href="https://advancedentalexport.com" target="_blank" class="see-more-btn">Know More</a>
+        </amp-story-grid-layer>
+    </amp-story-page>
+    {% endfor %}
+</amp-story>
+</body>
+</html>
