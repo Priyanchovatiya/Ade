@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!-- [if lt IE 7 ]><html class="ie ie6" lang="en"><![endif] -->
+<!-- [if IE 7 ]><html class="ie ie7" lang="en"><![endif] -->
+<!-- [if IE 8 ]><html class="ie ie8" lang="en"><![endif] -->
+<!-- [if (gte IE 9)|!(IE)]><! -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="google-site-verification" content="ez7ckA2P11b5nJYM6BEyfBq8A029JzkBWdnUZiP_D8w" />
+    {% load static %} {% block seo %} {% endblock %}
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="{% static 'css/bootstrap1.min.css' %}" as="style">
+    <link rel="stylesheet" href="{% static 'css/bootstrap1.min.css' %}" media="print" onload="this.media='all'">
+    <link  href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    <link rel="preload" href="{% static 'css/flaticon.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/flaticon.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    <link  href="{% static 'css/menu.css' %}" rel='stylesheet' />
+    <link  rel="preload" href="{% static 'css/magnific-popup.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/magnific-popup.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    <link  rel="preload" href="{% static 'css/owl.carousel.min.css' %}" as='stylesheet'/>
+    <link  href="{% static 'css/owl.carousel.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    <link  rel="preload" href="{% static 'css/owl.theme.default.min.css' %}" as='stylesheet'/>
+    <link  href="{% static 'css/owl.theme.default.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    <link  rel="preload" href="{% static 'css/review.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/review.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+    <link  rel="preload" href="{% static 'css/blog.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/blog.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+    <link  rel="preload" href="{% static 'css/animate.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/animate.css' %}" rel='stylesheet' media="print" onload="this.media='all'" />
+    <link  rel="preload" href="{% static 'css/jquery.datetimepicker.min.css' %}" as='stylesheet' />
+    <link  href="{% static 'css/jquery.datetimepicker.min.css' %}" rel='stylesheet' media="print" onload="this.media='all'"/>
+    
+    <link  href="{% static 'css/style.css' %}" rel='stylesheet' />
+    <link  href="{% static 'css/responsive.css' %}" rel='stylesheet'/>
+    <!-- Plyr CSS -->
+    
+
+    
+
+     <!--CDN LINKS-->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  
+    {% block css %} {% endblock %}
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/javascript"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y"
+    ></script>
+    <!-- Plyr JavaScript -->
+    
+
+    <script async>
+      document.addEventListener("DOMContentLoaded", () => {
+        const internationalPhoneNumber = "+1 5513800385";
+        const internationalEmail = "overseas@advancedentalexport.com";
+        const localWhatsappLink = "https://wa.link/u0qly1";
+        const internationalWhatsappLink = "https://wa.link/2v2cud";
+        const whatsappLink = document.getElementById("whatsappLink");
+        const phoneLink = document.getElementById("phoneLink");
+        // Get all phone and email elements
+        const phoneElements = document.querySelectorAll(
+          ".footer-contact-title.phone"
+        );
+        const emailElements = document.querySelectorAll(
+          ".footer-contact-title.email"
+        );
+
+        fetch("https://ipinfo.io/json?token=718446798cd1d4")
+          .then((response) => response.json())
+          .then((data) => {
+            const countryCode = data.country || "UNKNOWN";
+            if (countryCode !== "IN") {
+              phoneElements.forEach((phoneElement, index) => {
+                if (index > 0) {
+                  phoneElement.style.display = "none";
+                } else {
+                  phoneElement.textContent = internationalPhoneNumber;
+                  phoneElement.href = "tel:" + internationalPhoneNumber;
+                }
+              });
+              emailElements.forEach((emailElement, index) => {
+                if (index > 0) {
+                  emailElement.style.display = "none";
+                } else {
+                  emailElement.textContent = internationalEmail;
+                }
+              });
+            } else {
+              phoneElements.forEach((phoneElement) => {
+                phoneElement.style.display = "";
+                phoneElement.textContent =
+                  phoneElement.getAttribute("data-default");
+              });
+
+              emailElements.forEach((emailElement) => {
+                emailElement.style.display = "";
+                emailElement.textContent =
+                  emailElement.getAttribute("data-default");
+              });
+            }
+            if (countryCode !== "IN") {
+              phoneLink.href = "tel:" + internationalPhoneNumber;
+              whatsappLink.href = internationalWhatsappLink;
+            } else {
+              phoneLink.href = "tel: +918469888877";
+              whatsappLink.href = localWhatsappLink;
+            }
+          })
+          .catch((error) => {
+            console.error("Geolocation API Error:", error);
+          });
+      });
+    </script>
+    <script async>
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "pxdorhfpga");
+    </script>
+  </head>
+
+  <body>
+    {% load static %} {% if not hide_social_image %}
+    <div class="social">
+      <div class="social-all-items">
+        <div class="social-item">
+          <a
+            href="https://www.facebook.com/advance.dental.exports"
+            target="_blank"
+            rel="nofollow"
+          >
+            Facebook
+            <i class="fa-brands fa-facebook-f" style="font-size: 15px"></i>
+          </a>
+        </div>
+        <div class="social-item">
+          <a
+            href="https://www.instagram.com/advance_dental_export/"
+            target="_blank"
+            rel="nofollow"
+          >
+            Instagram
+            <i
+              class="fa-brands fa-instagram"
+              style="font-size: 15px; font-weight: 600"
+            ></i>
+          </a>
+        </div>
+        <div class="social-item">
+          <a
+            href="https://www.linkedin.com/company/advance-dental-export/"
+            target="_blank"
+            rel="nofollow"
+          >
+            Linkedin
+            <i class="fa-brands fa-linkedin" style="font-size: 15px"></i>
+          </a>
+        </div>
+        <div class="social-item">
+          <a
+            href="https://wa.link/u0qly1"
+            target="_blank"
+            id="whatsappLink"
+            rel="nofollow"
+          >
+            Whatsapp
+            <i
+              class="fa-brands fa-whatsapp"
+              style="font-size: 15px; font-weight: 600"
+            ></i>
+          </a>
+        </div>
+        <div class="social-item">
+          <a
+            href="tel:+918469888877"
+            target="_blank"
+            id="phoneLink"
+            rel="nofollow"
+          >
+            Phone
+            <i class="fa-solid fa-phone" style="font-size: 15px"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <!-- end -->
+    <div id="page" class="page">
+      <header id="header" class="header">
+        {% include 'mobile.html' %}
+        <div class="headtoppart bg-steelblue clearfix">
+          <div class="clearfix container p-0 mx-auto my-0">
+            <div class="headertopleft">
+              <div class="address clearfix">
+                <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                  Velanja Road, Umra, Surat (Gujarat) India.
+                </span>
+                <a href="tel:+918488888877" class="callusbtn"
+                  ><i class="fas fa-phone"></i>+91 84888 88877</a
+                >
+                <a href="tel:+918469888877" class="callusbtn"
+                  ><i class="fas fa-phone"></i>+91 84698 88877</a
+                >
+              </div>
+            </div>
+            <div class="headertopright">
+              <a
+                class="linkedinicon"
+                title="Linkedin"
+                target="_blank"
+                href="https://www.linkedin.com/company/advance-dental-export/"
+              >
+                <i class="fab fa-linkedin-in"></i>
+                <span class="mobiletext02">Linkedin</span>
+              </a>
+              <a
+                class="twittericon"
+                title="Twitter"
+                target="_blank"
+                href="https://www.instagram.com/advance_dental_export/"
+              >
+                <i class="fab fa-instagram"></i>
+                <span class="mobiletext02">Instagram</span>
+              </a>
+              <a
+                class="facebookicon"
+                title="Facebook"
+                target="_blank"
+                href="https://www.facebook.com/advance.dental.exports"
+              >
+                <i class="fab fa-facebook-f"></i>
+                <span class="mobiletext02">Facebook</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        {% include 'pc.html' %}
+      </header>
+      {% block body %} {% endblock %}
+      <div class="container mt-5 pt-5">
+        <section class="footer-contact-section">
+          <div class="footer-contact-wrapper">
+            <div class="row mx-0">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2 px-sm-4">
+                <div class="d-flex footer-content-wrapper">
+                  <i
+                    aria-hidden="true"
+                    class="fas fa-map-marked-alt footer-contact-icon"
+                  ></i>
+                  <a
+                    href="https://maps.app.goo.gl/XSUTrZ3JvfYqqFd47"
+                    target="_blank"
+                    class=""
+                  >
+                    <p class="footer-contact-title mb-0">
+                      Plot No. 1 to 8, Marutidham Industrial Estate, Behind
+                      Hotel Royal, Velanja Road, Umra, Surat - 394 130.
+                      (Gujarat) INDIA.
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
+                <div class="d-flex footer-content-wrapper">
+                  <i
+                    aria-hidden="true"
+                    class="fas fa-envelope-open-text footer-contact-icon"
+                  ></i>
+                  <div class="d-block footer-contact-title">
+                    <!-- Default Emails -->
+                    <a
+                      href="mailto:info@advancedentalexport.com"
+                      class="footer-contact-title email"
+                      data-default="info@advancedentalexport.com"
+                      >info@advancedentalexport.com</a
+                    >
+                    <a
+                      href="mailto:overseas@advancedentalexport.com"
+                      class="footer-contact-title email"
+                      data-default="overseas@advancedentalexport.com"
+                      >overseas@advancedentalexport.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-12 px-2">
+                <div class="d-flex footer-content-wrapper">
+                  <i
+                    aria-hidden="true"
+                    class="fas fa-phone-alt footer-contact-icon fa-flip-horizontal"
+                  ></i>
+                  <div class="d-block">
+                    <!-- Default Phone Numbers -->
+                    <a
+                      href="tel:+91 8488888877"
+                      class="footer-contact-title phone"
+                      data-default="+91 84888 88877"
+                      >+91 84888 88877</a
+                    ><br />
+                    <a
+                      href="tel:+91 8469888877"
+                      class="footer-contact-title phone"
+                      data-default="+91 84698 88877"
+                      >+91 84698 88877</a
+                    ><br />
+                    <a
+                      href="tel:+1 551-380-0385"
+                      class="footer-contact-title phone"
+                      data-default="+1 551-380-0385 (overseas)"
+                      >+1 5513800385</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      {% comment %} <div id="chat-container">
+        <div id="chat-box">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Ask me anything..." onkeypress="handleKeyPress(event)">
+            <button class="btn-blue chatbot-button"onclick="sendMessage()">Send</button>
+        </div>
+      </div> {% endcomment %}
+      <!-- Floating Chatbot Button -->
+      <button id="chat-popup-btn"><i class="fa fa-solid fa-message"></i></button>
+      <div id="chat-container">
+        <div class="chat-head">
+          <a href="{% url 'home:home' %}"><img src="{% static 'img/logo.png' %}" width="137" height="40" alt="header-logo" /></a>
+          
+          <button id="closePopup" class="popup-btn"><i class="fa fa-solid fa-xmark "></i></button>
+          
+          
+        </div>
+        <div id="chat-box">
+            <div id="chat-messages"></div>
+            <div id="chat-buttons"></div> <!-- User options will be dynamically added here -->
+        </div>
+      </div>
+      <footer class="footer-section">
+        <div class="container">
+          <div class="row justify-lg-content-center">
+            <div class="col-md-6 col-lg-6 col-sm-11">
+              <div class="footer-info ml-25">
+                <img
+                  src="{% static 'img/logo.png' %}"
+                  width="auto"
+                  height="90"
+                  alt="footer-logo"
+                  class="footer-logo"
+                />
+                <p class="p-sm mt-20">
+                  <a href="https://advancedentalexport.com/"
+                    >Advance Dental Export</a
+                  >
+                  is a full service dental lab that specializes in dental
+                  implants, cosmetic dentistry and digital dentistry. Haresh
+                  Savani, CEO, started’ ADE’ in 2009 with a vision to fabricate
+                  only the highest quality dental prosthetics to ensure
+                  long-lasting and esthetically pleasing outcomes for every
+                  dental lab product.
+                </p>
+                {% comment %}
+                <p>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.dental.doctore_app"
+                    target="_blank"
+                    ><img
+                      src="{% static 'lo.png' %}"
+                      class="download"
+                      alt="Download"
+                  /></a>
+                </p>
+                {% endcomment %}
+                <div class="footer-socials-links mt-20">
+                  <ul class="foo-socials text-center clearfix">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/advance.dental.exports"
+                        target="_blank"
+                        class="ico-facebook"
+                        rel="nofollow"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/advance_dental_export/"
+                        target="_blank"
+                        class="ico-twitter"
+                        rel="nofollow"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/advance-dental-export/"
+                        target="_blank"
+                        class="ico-google-plus"
+                        rel="nofollow"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-links mb-40">
+                <h5 class="h5-xs">Important Links</h5>
+                <ul class="foo-links clearfix" style="margin-top: 30px">
+                  <li>
+                    <a href="{% url 'home:about' %}">About us</a>
+                  </li>
+                  <li>
+                    <a href="https://advancedentalexport.com/blog/">Blogs</a>
+                  </li>                
+                  <li>
+                    <a href="{% url 'home:career' %}">Careers</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'home:contact_new' %}">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'home:privacy' %}">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'home:testimonals' %}">Testimonials</a>
+                  </li>
+                  <li>
+                    <a href="https://ultimatesmiledesign.com" target="_blank"
+                      >Ultimate Smile Design</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-links mb-40">
+                <h5 class="h5-xs">Discover</h5>
+                <ul class="clearfix foo-links" style="margin-top: 30px">
+                  <li>
+                    <a href="{% url 'home:verify_warrenty' %}" target="_blank"
+                      >Verify Warranty</a
+                    >
+                  </li>
+                  <li class="nl-simple header-btn clss">
+                    <a href="https://client.advancedentalexport.com/"
+                      >Client Login</a
+                    >
+                  </li>
+                  <li>
+                    <a href="{% url 'home:gallery' %}">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'home:exhibition' %}">Exhibition Gallery</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'home:beforeafter' %}">Before After</a>
+                  </li>
+                  <li class="nl-simple header-btn" aria-haspopup="true">
+                    <a href="{% url 'home:stl' %}">Submit STL File</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://advancedentalexport.com/sitemap.xml"
+                      target="_blank"
+                      >Site Map</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="footer-copyright">
+                &copy; 2025
+                <span
+                  ><a href="https://advancedentalexport.com/"
+                    >Advance Dental Export</a
+                  ></span
+                >. All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap1.min.js' %}"></script>
+    <script src="{% static 'js/modernizr.custom.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollto.js' %}"></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    {% block js %} {% endblock %}
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/plugins/jquery.lazy.av.min.js"></script>
+    <script src="{% static 'js/changer.js' %}"></script>
+    <script src="{% static 'js/styleswitch.js' %}"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "700687238635946");
+      fbq("track", "PageView");
+
+      new WOW().init();
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=700687238635946&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
+    {% for ie in messages %}
+    <script>
+      Swal.fire({
+        position: "top-end",
+        icon: "{{ie.tags}}",
+        title: "{{ie.message}}",
+        showConfirmButton: !1,
+        timer: 2500,
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var script = document.createElement("script");
+          script.src = "https://www.googletagmanager.com/gtag/js?id=G-Q54R2WNM7Y";
+          script.async = true;
+          document.body.appendChild(script);
+    
+          script.onload = function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-Q54R2WNM7Y");
+          };
+        }, 2000); // Load after 2 seconds (Adjust delay if needed)
+      });
+    </script>
+    {% endfor %} 
+    <script>
+      document.getElementById("closePopup").addEventListener("click", function () {
+        document.getElementById("chat-container").style.display = "none";
+    });
+      document.getElementById("chat-popup-btn").addEventListener("click", function() {
+        let chatContainer = document.getElementById("chat-container");
+        let currentDisplay = window.getComputedStyle(chatContainer).display;  // Get actual visibility
+    
+        if (currentDisplay === "none") {
+            chatContainer.style.display = "block";  // Show on first click
+        } else {
+            chatContainer.style.display = "none";   // Hide on second click
+        }
+    });
+    
+    
+      const questionFlow = {
+        "start": ["How may i help you?", ["Dental Implants 🙂‍↔️", "Cosmetic Dentistry 🙂‍↔️", "Digital Dentistry 😊"]],
+        "Dental Implants 🙂‍↔️": ["Do you need full mouth implants?", ["Yes", "No"]],
+        "Cosmetic Dentistry 🙂‍↔️": ["Are you looking for veneers or crowns?", ["Veneers", "Crowns"]],
+        "Digital Dentistry": ["Do you need scanning services?", ["Yes", "No"]],
+        "Yes": ["Would you like to restart or end the chat?", ["Restart", "End Chat"]],
+        "No": ["Would you like to restart or end the chat?", ["Restart", "End Chat"]],
+        "Restart": ["Restarting chat...", ["Dental Implants", "Cosmetic Dentistry", "Digital Dentistry"]],
+        "End Chat": ["Chat Ended. Thank you!", []]
+    };
+    
+  
+      function addMessageToChatBox(text, sender) {
+          let chatMessages = document.getElementById("chat-messages");
+          let messageDiv = document.createElement("div");
+          messageDiv.classList.add("chat-bubble");
+  
+          if (sender === "user") {
+            messageDiv.classList.add("user-message");
+        } else if (text.includes("Chat has ended")) {
+            messageDiv.classList.add("chat-ended"); // Custom style for "Chat Ended"
+        } else {
+            messageDiv.classList.add("bot-message");
+        }
+          messageDiv.innerHTML = text;
+          chatMessages.appendChild(messageDiv);
+          setTimeout(() => {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 100);
+      }
+  
+      function addButtons(options) {
+          // let chatButtons = document.getElementById("chat-buttons");
+          let chatButtons = document.getElementById("chat-messages");
+          chatButtons.innerHTML.add = ""; 
+  
+          options.forEach(option => {
+              let button = document.createElement("button");
+              button.classList.add("chatbot-button");
+              button.innerHTML = option;
+              button.onclick = function() {
+                  handleUserChoice(option);
+              };
+              chatButtons.appendChild(button);
+          });
+          chatButtons.scrollTop = chatButtons.scrollHeight;
+      }
+  
+      function handleUserChoice(choice) {
+          addMessageToChatBox(choice, "user"); // Show user choice
+          document.getElementById("chat-buttons").innerHTML = ""; // Remove buttons
+  
+          // Get next bot message and options
+          let nextStep = questionFlow[choice];
+          if (nextStep) {
+              let botMessage = nextStep[0];
+              let options = nextStep[1];
+  
+              setTimeout(() => {
+                  addMessageToChatBox(botMessage, "bot");
+
+                  if (choice === "Restart") {
+                    setTimeout(() => startChat(), 100); // Restart chat
+                } else if (choice === "End Chat") {
+                    addMessageToChatBox("Chat has ended. Refresh to start again. 😊", "bot");
+                } else if (options.length > 0) {
+                    setTimeout(() => addButtons(options), 100);
+                }
+              }, 100);
+          } else {
+              addMessageToChatBox("Thank you for chatting with us! 😊", "bot");
+          }
+      }
+  
+      function startChat() {
+
+        document.getElementById("chat-messages").innerHTML = ""; // Clear previous messages
+        document.getElementById("chat-buttons").innerHTML = "";
+
+          let firstMessage = questionFlow["start"][0];
+          let firstOptions = questionFlow["start"][1];
+  
+          addMessageToChatBox(firstMessage, "bot");
+          setTimeout(() => addButtons(firstOptions), 1000);
+      }
+  
+      window.onload = startChat; // Start chatbot when page loads
+  </script>
+  
+    {% comment %} <script>
+      function addMessageToChatBox(text, sender) {
+        let chatMessages = document.getElementById("chat-messages");
+        let messageDiv = document.createElement("div");
+        messageDiv.classList.add("chat-bubble");
+
+        if (sender === "user") {
+            messageDiv.classList.add("user-message");
+        } else {
+            messageDiv.classList.add("bot-message");
+        }
+
+        messageDiv.innerHTML = text;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+      async function sendMessage() {
+          let inputField = document.getElementById("chat-input");
+          let userMessage = inputField.value.trim();
+          if (userMessage === "") return;
+  
+          let chatMessages = document.getElementById("chat-messages");
+          
+          addMessageToChatBox(userMessage, "user");
+          inputField.value = ""; // Clear input field
+  
+          try {
+              let response = await fetch("/chatbot/chat/", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ message: userMessage })
+              });
+  
+              let data = await response.json();
+  
+              if (response.ok) {
+                  addMessageToChatBox(data.reply, "bot"); 
+                  
+              } else {
+                  addMessageToChatBox("Error: " + data.reply, "bot");
+                  
+              }
+  
+              chatMessages.scrollTop = chatMessages.scrollHeight;
+  
+          } catch (error) {
+              console.error("Error:", error);
+              chatMessages.innerHTML += `<p><b>Bot:</b> Error communicating with chatbot.</p>`;
+          }
+      }
+  
+      function handleKeyPress(event) {
+          if (event.key === "Enter") sendMessage();
+      }
+  </script> {% endcomment %}
+  
+    
+    {% block javascript %}{% endblock %}
+  </body>
+</html>
+
+
+{% comment %}
+chatMessages.innerHTML += `<p><b>You:</b> ${userMessage}</p>`;
+chatMessages.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+chatMessages.innerHTML += `<p><b>Bot:</b> Error: ${data.reply}</p>`;
+ {% endcomment %}

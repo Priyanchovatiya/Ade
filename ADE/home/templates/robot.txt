@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /sitemap.xml
+Disallow: /gallery/?page=*
+Allow: /blog/$
+Disallow: /blog/*
+Disallow: /event-gallery/expodent-delhi/?page=*
+Disallow: /event-gallery/gujarat-dental-show-2019/?page=*
+Disallow: /event-gallery/famdent-mumbai/?page=*
+Sitemap: https://advancedentalexport.com/sitemap.xml
